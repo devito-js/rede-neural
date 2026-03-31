@@ -86,17 +86,6 @@ basic (6.44%)
 
 Os valores mudam a cada execução por causa da inicialização aleatória dos pesos e do conjunto muito pequeno de treino.
 
-## Observação importante
-
-No código atual, existe um objeto `pessoa` com dados da Ana, mas a predição é feita com um vetor fixo em `pessoaTensorNormalizada`.
-
-Se quiser, você pode evoluir o projeto para:
-
-- converter automaticamente `cor` e `localizacao` para one-hot
-- normalizar idade de forma dinâmica
-- usar mais amostras para melhorar generalização
-- salvar/carregar modelo treinado
-
 ## Script disponível
 
 - `npm start`: executa `node index.js`
