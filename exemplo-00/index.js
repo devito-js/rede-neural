@@ -25,7 +25,7 @@ async function trainModel(xs, ys) {
     await model.fit(xs, ys, {
         verbose: 0, epochs: 100, shuffle: true, callbacks: {
             onEpochEnd: (epoch, logs) => {
-                console.log(`Epoch ${epoch}: loss = ${logs.loss}, accuracy = ${logs.accuracy}`);
+                console.log(`Epoch ${epoch}: loss = ${logs.loss}, accuracy = ${logs.acc}`);
             }
         }
     });
@@ -94,7 +94,7 @@ const idadeMax = 40;
 const idadeNormalizada = (pessoa.idade - idadeMin) / (idadeMax - idadeMin);
 
 const pessoaTensorNormalizada = [
-    [0.2, 1, 0, 0, 1, 0, 0] // Ana
+    [0.2, 0, 1, 0, 0, 1, 0] // Ana
 ]
 
 const predicao = await predict(model, pessoaTensorNormalizada);
